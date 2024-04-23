@@ -1,0 +1,14 @@
+'''
+Exercício 8 
+Implemente um programa que solicite ao usuário um número. Exiba a tabuada de 0 a 100 deste número.
+
+'''
+
+
+tabuada=0
+
+
+num=int(input("Digite um número "))
+for i in range(0,101):
+    tabuada=num*i
+    print(num,"x", i, "=", tabuada)
