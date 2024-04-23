@@ -1,0 +1,40 @@
+/**
+  
+Exercício 10
+Escreva um algoritmo que identifique se um número é primo ou não. 
+(Número primo é aquele que é divisível somente por ele e por 1. Exemplo: 7).
+
+**/
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = 0;
+        boolean numeroPrimo=true;
+
+        System.out.println("Digite um número: ");
+        num = sc.nextInt();
+
+        if(num == 0 || num == 1){
+            System.out.println("Esse número não é primo ");
+        
+        }
+        else{
+            
+            for (int i = 2; i <= (num / 2); i++){
+              if (num % i == 0) {
+                numeroPrimo = false;
+                break;}
+                
+            }
+
+        if(numeroPrimo){
+            System.out.println("Esse número é primo");
+        }
+        else{
+            System.out.println("Esse número não é primo ");
+        }
+    }
+}}
