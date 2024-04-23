@@ -1,0 +1,32 @@
+'''
+
+Exercício 6
+
+Faça um programa que receba dez números,
+calcule e mostre a soma dos números pares,
+dos números ímpares e dos divisíveis por 3.
+
+
+'''
+somaPar=0
+somaIpar=0
+divisivel=0
+
+
+
+for i in range(10):
+    num=float(input("Digite um número "))
+    if num%2==0:
+        somaPar=somaPar+num
+    
+    if num%2==1:
+        somaIpar=somaIpar+num
+        
+    if num%3==0:
+        divisivel=divisivel+num
+        
+print("A soma dos números pares é ",somaPar)
+print("A soma dos núeros ímpares é ", somaIpar)
+print("A soma do números difisíveis por 3 é ",divisivel)
+
+
