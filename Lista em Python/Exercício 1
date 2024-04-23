@@ -1,0 +1,12 @@
+''' Exercício 1
+ Implemente um programa que solicite 10 números inteiros informados pelo usuário. Exiba a soma.'''
+soma = 0
+
+
+for i in range(10):
+    num = int(input("Digite um número inteiro "))
+    soma = soma+ num
+
+
+print("A soma dos números que você digitou é " , soma)
+
