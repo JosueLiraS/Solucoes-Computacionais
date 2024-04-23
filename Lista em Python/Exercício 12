@@ -1,0 +1,45 @@
+'''
+Exercício 12
+
+Escreva um algoritmo que receba a idade, a altura e o peso de 25 pessoas. Calcule e exiba.
+a) Quantidade de pessoas com idade superior a 50 anos.
+b) A média das alturas das pessoas com idade entre 10 e 20 anos;
+c) A porcentagem de pessoas com peso inferior a 40 quilos entre todas as analisadas.
+'''
+
+
+cinquetaMais=0
+quantidaPessoas=0
+mediaAltura=0
+somaAltura=0
+pessoasMenos=0
+totalPessoas=0
+resultado=0
+
+
+
+for i in range(25):
+    idade=int(input("Digite sua idade "))
+    if idade>50:
+        cinquetaMais=cinquetaMais+1
+    if idade>=0:
+        totalPessoas=totalPessoas+1
+        
+    altura=float(input("Digite sua altura "))
+    if idade>10 and idade<20:
+        quantidaPessoas=quantidaPessoas+1
+        somaAltura=somaAltura+altura
+        mediaAltura=somaAltura/quantidaPessoas
+    
+    peso=float(input("Digite seu peso "))
+    if peso<40:
+        pessoasMenos=pessoasMenos+1
+    resultado=pessoasMenos*100/totalPessoas
+   
+        
+    
+    
+print( "Quantidade de pessoas com idade superior a 50 anos é ", cinquetaMais)
+print("A média das alturas das pessoas com idade entre 10 e 20 anos ", mediaAltura)
+print("A porcentagem de pessoas com peso inferior a 40 quilos é ", resultado,"%")
+
