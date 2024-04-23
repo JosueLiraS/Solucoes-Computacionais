@@ -1,0 +1,39 @@
+/******************************************************************************
+
+Exercicio 6
+Faça um programa que receba dez números,
+calcule e mostre a soma dos números pares,
+dos números ímpares e dos divisíveis por 3.
+
+*******************************************************************************/
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    
+	    float[] num=new float[10];
+	    float numeroPar=0, somaPar=0, somaImpar=0, somaDivisivel=0;
+	  
+	    
+	    for (int i=0;i<num.length;i++ ) {
+		System.out.println("Digite um número");
+	    num[i]=sc.nextFloat(); 
+	    if(num[i]%2==0){
+	       somaPar=somaPar+num[i];
+	     }
+	     if(num[i]%2==1){
+	       somaImpar=somaImpar+num[i];
+	     }
+	     
+	     if(num[i]%3==0){
+	      somaDivisivel=somaDivisivel+num[i];
+	     }
+	        
+	    }
+	    System.out.println("Soma dos números pares é "+ somaPar);
+	    System.out.println("Soma dos números impares é "+ somaImpar);
+	    System.out.println("Soma dos números divisíveis por 3 é "+ somaDivisivel);
+		
+	}
+}
