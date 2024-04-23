@@ -1,0 +1,54 @@
+
+/******************************************************************************
+
+Exercício 5
+
+Escreva um algoritmo que receba a idade, a altura e o peso de 25 pessoas. Calcule e exiba.
+a) Quantidade de pessoas com idade superior a 50 anos.
+b) A média das alturas das pessoas com idade entre 10 e 20 anos;
+c) A porcentagem de pessoas com peso inferior a 40 quilos entre todas as analisadas.
+*******************************************************************************/
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner (System.in);
+	    
+	    int[] idade=new int[25];
+	    float[] altura= new float[25];
+	    float[] peso=new float[25];
+	    int maisCinquenta=0,quatidadePessoas=0, pessoasMenosQuarenta=0;
+	    float somaAltura=0, mediaAltura=0, resultado=0;
+	    
+	    for(int i=0;i<idade.length;i++) {
+		System.out.println("Digite sua idade ");
+		idade[i]=sc.nextInt();
+		
+		System.out.println("Digite sua altura");
+		altura[i]=sc.nextFloat();
+		
+		System.out.println("Digite sua peso");
+		peso[i]=sc.nextFloat();
+	        
+	        if(idade[i]>50){
+	            maisCinquenta=maisCinquenta+1;
+	       }
+	       
+	       if(idade[i]>10 && idade[i]<20){
+	           quatidadePessoas=quatidadePessoas+1; 
+	           somaAltura=somaAltura+altura[i];
+	           mediaAltura=somaAltura/quatidadePessoas;
+	       }
+	       
+	       if(peso[i]<40){
+	           pessoasMenosQuarenta=pessoasMenosQuarenta+1;
+	           resultado=pessoasMenosQuarenta*100/peso.length;
+	           
+	       
+	       }
+	    }
+	    System.out.println("Quantidade de pessoas com idade superior a 50 anos é " + maisCinquenta);
+	    System.out.println("A média das alturas das pessoas com idade entre 10 e 20 ano é " + mediaAltura);
+	    System.out.println("A porcentagem de pessoas com peso inferior a 40 quilos entre todas as analisadas é " + resultado+"%");
+	}
+}
