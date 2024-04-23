@@ -1,0 +1,19 @@
+''' Exercício 2
+Implemente um programa que solicite 5 números do tipo ponto flutuante ao usuário. 
+Exiba o maior número informado.'''
+
+maiorNumero=0
+
+
+for i in range(5):
+    num=float(input ('Digite um número decimal '))
+    if num<0:
+        print("Digite um número válido")
+        break
+    
+    if num>maiorNumero:
+        maiorNumero=num
+    
+print("O maior número informado é ", maiorNumero)
+
+
