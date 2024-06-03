@@ -1,0 +1,46 @@
+/******************************************************************************
+
+7. Faça uma função que receba três números inteiro como parâmetros, representando horas, minutos e segundos
+e os converta em segundos. Exemplo 2h, 40min e 10 seg. correspondem a 9.610 segundos.
+*******************************************************************************/
+import java.util.Scanner;
+public class Main
+{
+    
+    static int numeroInteiro(int horas, int minutos, int segundos){
+        
+        //esta primeira parte esta convertendo horas em minutos
+        int horasMinutos= horas*60;
+        
+        int conversaoHora=horasMinutos*60;
+        int conversaoMinuto=minutos*60;
+        
+        int resultadoConvertido= conversaoHora+conversaoMinuto+segundos;
+        
+        return resultadoConvertido;
+        
+    }
+    
+    
+    
+    
+    
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    
+	    int hora, minuto,segundo;
+	    int resultado;
+	    
+	    System.out.println("Digite as horas");
+	    hora=sc.nextInt();
+	    System.out.println("Digite os minutos");
+	    minuto=sc.nextInt();
+	    System.out.println("Digite os segundos");
+	    segundo=sc.nextInt();
+	    
+	    
+	    resultado=numeroInteiro(hora,minuto,segundo);
+	    System.out.println(hora+"h "+ minuto+"min "+"e "+ segundo+"seg");
+		System.out.println("Correspondem "+resultado+" segundos");
+	}
+}
