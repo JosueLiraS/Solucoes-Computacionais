@@ -1,0 +1,28 @@
+/*
+
+12. Faça uma função que retorne o último nome de uma pessoa passado como argumento dessa função.
+
+
+*/
+
+public class Main {
+    
+
+    static String ultimoNome(String nome) {
+        int posicaoUltimoEspaco = nome.lastIndexOf(' ');
+        return nome.substring(posicaoUltimoEspaco + 1);
+    }
+    
+    
+    
+
+    public static void main(String[] args) {
+        
+        String nomeDigitado;
+        
+        nomeDigitado=ultimoNome("Luis Herinque Siqueira");
+        
+        System.out.println(nomeDigitado);
+    }
+}
+
