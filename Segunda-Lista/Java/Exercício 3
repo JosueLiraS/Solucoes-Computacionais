@@ -1,0 +1,107 @@
+/******************************************************************************
+
+3. Implemente um programa que receba o total das vendas de cada vendedor e os armazene em um vetor.
+Receba também o percentual de comissão de cada vendedor e armazene-os em um outro vetor. Receba os
+nomes desses vendedores e armazene-os em um terceiro vetor. Existem apenas dez vendedores. Calcule e
+mostre:
+ Um relatório com os nomes dos vendedores e os valores a receber;
+ O total das vendas de todos os vendedores;
+ O maior valor a receber e quem o receberá;
+ O menor valor a receber e quem o receberá;
+
+
+*******************************************************************************/
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc= new Scanner(System.in);
+	    
+	    double[] totalVendas= new double[10];
+	    double[] comisaoVendedor= new double[10];
+	    String[] nomeVendedores= new String[10];
+	    double[] totalComisao= new double[10];
+	    double totaVendasVendedores=0, totalVendasComisao=0;
+	    double maiorValorReceber=0, menorValorReceber=0;
+	    int posicaoPessoa=0;
+	    int posicaoPessoaDois=0;
+	    
+	    
+	    
+	    
+	    for (int i=0;i<totalVendas.length;i++ ) {
+	   
+	    System.out.println("Digite o nome do " + (i+1) + "º" + " vendedor " );
+	    nomeVendedores[i]=sc.nextLine();    
+	    
+	        
+	    System.out.println("Digite o total vendas do " + (i+1) + "º" + " vendedor " );
+	    totalVendas[i]=sc.nextDouble();
+	    
+	    System.out.println("Digite o percentual de comisão do " + (i+1) + "º" + " vendedor " );
+	    comisaoVendedor[i]=sc.nextDouble();
+	    
+	    sc.nextLine();
+	    
+	   
+	   // essa parte realiza o valor da  comisão 
+	    totalComisao[i]=(comisaoVendedor[i]/100)*totalVendas[i]+totalVendas[i];
+	    
+	   // essa parte realiza o  total de vendas com comisão 
+	    totalVendasComisao=totalVendasComisao+totalComisao[i];
+	    
+	   //essa parte aqui realiza o total de vendas sem comisao
+	    totaVendasVendedores=totaVendasVendedores+totalVendas[i];
+	    
+	    
+	    
+	   
+	     }
+	     System.out.println(" ");
+	      
+	     System.out.println("Os nomes dos vendedores e os valores a receber ");
+	     for(int i=0; i<totalVendas.length;i++){
+	         
+	     System.out.println(nomeVendedores[i]+" "+" vai receber "+"R$"+totalComisao[i]);
+	          
+	     }
+	     
+	     
+	     
+	    //essa parte verifica o maior valor a receber e quem o receberá;
+	     for(int i=0; i<totalVendas.length;i++){
+	         
+	     if(totalComisao[i]>maiorValorReceber){
+	        maiorValorReceber=totalComisao[i];
+	        posicaoPessoa=i;
+	       
+	       }
+	          
+	     }
+	     //essa parte verifica o menor valor a receber e quem o receberá;
+	      for(int i=0; i<totalVendas.length;i++){
+	         
+	     if(totalComisao[i]<maiorValorReceber){
+	        menorValorReceber=totalComisao[i];
+	        posicaoPessoaDois=i;
+	       
+	       }
+	          
+	     }
+	      System.out.println(" ");
+	      System.out.println("O total das vendas de todos os vendedores sem comisão "+totaVendasVendedores);
+	      System.out.println("O total das vendas de todos os vendedores com comisão "+totalVendasComisao);
+	      System.out.println(" ");
+	      System.out.println("O maior valor a receber é "+ "R$" + maiorValorReceber +" e o vedendor(a) "+ nomeVendedores[posicaoPessoa]+" que vai receber " );
+	      System.out.println("O menor valor a receber é "+ "R$" +menorValorReceber +" e o vedendor(a) "+ nomeVendedores[posicaoPessoaDois]+" que vai receber " );
+	     
+	     
+	     
+		
+	}
+	
+}
+    
+    
+
