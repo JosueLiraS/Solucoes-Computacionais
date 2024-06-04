@@ -1,1 +1,41 @@
 
+/******************************************************************************
+
+10. Faça uma função que receba um número inteiro positivo e retorne um valor boleano indicando
+se o número é primo ou não. Um número primo é aquele que é divisível por apenas ele mesmo e um
+
+*******************************************************************************/
+import java.util.Scanner;
+public class Main
+{
+    public static boolean numeroPrimo(int num) {
+        
+        
+        if (num <= 1) {
+            return false; 
+        }
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                return false; 
+            }
+        }
+        return true; 
+    }
+
+
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        
+        int numero; 
+        System.out.println("Digite um número");
+        numero=sc.nextInt();
+        
+        boolean resultado = numeroPrimo(numero);
+        if (resultado) {
+            System.out.println(numero + " é um número primo.");
+        } else {
+            System.out.println(numero + " não é um número primo.");
+        }
+    }
+}
