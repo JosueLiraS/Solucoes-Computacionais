@@ -6,6 +6,6 @@ Objetivo: Adicionar métodos na classe Pessoa para exibir informações.
 
 // Método exibirInformacoes
     public  void exibirInformacoes() {
-       System.out.println("O nome e " + nome);
-       System.out.println("A idade e " + idade);
+       System.out.println("O nome da pessoa e " + nome);
+       System.out.println("A idade da pessoa e " + idade);
     }
