@@ -1,0 +1,13 @@
+/*
+Exercício 2: Criando Métodos na Classe
+Objetivo: Adicionar métodos na classe Pessoa para exibir informações.
+• Adicione um método exibirInformacoes na classe Pessoa que exiba o nome e a idade da pessoa.
+*/
+
+// Método exibirInformacoes
+    public  void exibirInformacoes() {
+        int idade=this.idade;
+        String nome=this.nome;
+       System.out.println("O nome e " + nome);
+       System.out.println("A idade e " + idade);
+    }
