@@ -45,35 +45,7 @@ public class Principal {
     veiculo.mover();
     }
     
-    
-    
-   
-
-    
-    
-   
-   
-    
-    
-    
-    
-    
-    
-  
-        
-        
-      
-     
-      
-      
-       
-       
-       
-        
-       
 }
     
-     
-    
-    
+   
 }
