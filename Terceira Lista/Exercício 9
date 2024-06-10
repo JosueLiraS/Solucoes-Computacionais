@@ -1,0 +1,28 @@
+/*
+Exercício 9: Polimorfismo com Classes
+Objetivo: Demonstrar o polimorfismo usando classes.
+• Crie uma lista de objetos do tipo Pessoa.
+06/06/24, 20:18 Una - Aimorés - 24
+https://student.ulife.com.br/ContentPlayer/Index?cd=RsHa%2fsUaTVqqXJAQvXEqaA%3d%3d&l=bqG%2f13S9DExXnTTSAEI2wg%3d%3d&lc=… 2/3
+• Adicione objetos Pessoa e Estudante na lista.
+• Itere sobre a lista e chame o método exibirInformacoes para cada objeto, demonstrando o polimorfismo
+
+*/
+
+import java.util.ArrayList;
+public class Principal {
+
+    public static void main(String[] args) {
+       
+
+ArrayList<Pessoa> listapessoa = new ArrayList<>();
+    listapessoa.add(new Pessoa("Isabel", 7));   
+    listapessoa.add(new Estudante("Maria", 23, "Engenharia"));
+    
+     for (Pessoa pessoas : listapessoa) {
+            pessoas.exibirInformacoes();
+        }
+
+}
+
+
