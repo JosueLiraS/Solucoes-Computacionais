@@ -1,0 +1,32 @@
+/*
+Exercício 8: Polimorfismo com Interfaces
+Objetivo: Demonstrar o polimorfismo usando a interface Trabalhador.
+• Crie uma classe Empresa com um método adicionarTrabalhador que receba um objeto do tipo Trabalhador.
+• No método adicionarTrabalhador, chame o método trabalhar.
+• Crie objetos de Funcionario e Gerente e adicione-os à empresa, demonstrando o polimorfismo.
+
+*/
+
+public class Empresa{
+    
+    
+    
+    public void adicionarTrabalhador(Trabalhador trabalhador){
+        trabalhador.trabalhar();
+        
+    }
+}
+
+
+import java.util.ArrayList;
+public class Principal {
+
+    public static void main(String[] args) {
+
+ Empresa empresa=new Empresa();
+
+ empresa.adicionarTrabalhador(new Gerente (90,"Leandro",909));
+      
+       empresa.adicionarTrabalhador(new Funcionario(98,"Operacional"));
+
+  
