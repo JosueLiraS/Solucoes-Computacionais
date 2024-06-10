@@ -1,0 +1,61 @@
+/*
+Exercício 10: Classe Abstrata
+Objetivo: Criar uma classe abstrata Veiculo e derivar subclasses Carro e Moto.
+• Crie uma classe abstrata Veiculo com um método abstrato mover.
+• Crie as classes Carro e Moto que herdem de Veiculo.
+• Implemente o método mover em ambas as classes, exibindo mensagens apropriadas para cada tipo de veículo.
+• Crie uma lista de objetos do tipo Veiculo e adicione objetos Carro e Moto na lista.
+• Itere sobre a lista e chame o método mover para cada objeto, demonstrando o polimorfismo.
+Esses exercícios vão te guiar através dos principais conceitos de orientação a objetos em Java, desde a criação de classes básicas até a implementação de herança, interfaces, polimorfismo e classes abstratas.
+
+
+*/
+
+
+
+
+public abstract class Veiculo {
+    
+    public abstract void mover();
+    
+}
+
+
+public class Moto extends Veiculo {
+
+    @Override
+    public void mover() {
+        System.out.println("A moto esta se movendo");
+
+    }
+    
+}
+
+public class Carro extends Veiculo {
+
+    @Override
+    public void mover() {
+        System.out.println("O carro esta se movendo");
+    }
+    
+}
+
+
+
+
+import java.util.ArrayList;
+public class Principal {
+
+  public static void main(String[] args) {       
+
+
+ ArrayList<Veiculo> lista = new ArrayList<>();
+    lista.add(new Carro());
+    lista.add(new Moto());
+    
+    for(Veiculo veiculo: lista ){
+    veiculo.mover();
+    }
+
+}
+    
